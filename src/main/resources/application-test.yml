@@ -1,0 +1,14 @@
+spring:
+  flyway:
+    enabled: true # Enable flyway to run against Testcontainers
+
+  jpa:
+    hibernate:
+      ddl-auto: validate # Ensure entities match Flyway schema
+
+  data:
+    redis:
+      host: localhost # Will be overridden by Testcontainers in actual integration tests
+      
+  rabbitmq:
+    host: localhost # Will be overridden by Testcontainers in actual integration tests
